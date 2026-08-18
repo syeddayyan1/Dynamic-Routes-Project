@@ -1,8 +1,14 @@
 import ProductCard from "@/components/ProductCard";
 
 export default async function Home() {
-  const response = await fetch("https://fakestoreapi.com/products");
-
+  const response = await fetch(
+    "https://fakestoreapi.com/products",
+    {
+      next: {
+        revalidate: 300,
+      },
+    }
+  );
   const products = await response.json();
 
   return (
