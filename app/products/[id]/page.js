@@ -41,7 +41,8 @@ export default async function ProductDetail({ params }) {
 
             <p className="mt-6 leading-7 text-gray-400">
               {product.description}
-            </p>
+            </p> <br></br>
+            
 
          
 
